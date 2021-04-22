@@ -47,14 +47,22 @@ public class LightImplement implements Lightbar {
             try {
                 inputStream.close();
             } catch (IOException e) {
+                Logger.e( e, "close inputStream error" );
             }
             try {
                 outputStream.close();
             } catch (IOException e) {
+                Logger.e( e, "close outputStream error" );
             }
             transport.close();
             Logger.i("-----Serial port Closed----");
         }
+    }
+
+    public void echo()
+    {
+        this.lastColor = new byte[]{(byte) 0xEE, (byte) 0xFF, (byte) 0x00};
+        this.send(this.lastColor);
     }
 
     public void red(String brightness) {
@@ -117,8 +125,9 @@ public class LightImplement implements Lightbar {
 
         try {
             outputStream.write(body);
+            Logger.i( "Send data complete." );
         } catch (IOException e) {
-            Logger.i("Serial port send FAILED");
+            Logger.e( e ,"Serial port send FAILED");
         }
     }
 }

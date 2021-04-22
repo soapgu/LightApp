@@ -10,5 +10,6 @@ public interface Lightbar {
     void red(String brightness);
     void green(String brightness);
     void yellow(String brightness);
+    void echo();
     void blink();
 }
