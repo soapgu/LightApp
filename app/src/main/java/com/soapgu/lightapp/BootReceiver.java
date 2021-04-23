@@ -46,7 +46,7 @@ public class BootReceiver extends BroadcastReceiver {
                         }
                         else {
                             this.lightbar.green("HIGH");
-                            Logger.i("-------Sent Red Light Complete---------");
+                            Logger.i("-------Sent GREEN Light Complete---------");
                             Toast sendToast = Toast.makeText(context, "Red Light Send", Toast.LENGTH_SHORT);
                             sendToast.show();
                         }
@@ -56,6 +56,9 @@ public class BootReceiver extends BroadcastReceiver {
                         if( !isOpen ){
                             this.lightbar.close();
                         }
+                        Intent newIntent = new Intent(context, MainActivity.class);
+                        context.startActivity(newIntent);
+                        //start main activity
                         disposables.clear();
                     }));
 
