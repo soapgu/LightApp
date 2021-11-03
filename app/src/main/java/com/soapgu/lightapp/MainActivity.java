@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         this.findViewById(R.id.button_red ).setOnClickListener( v -> lightbar.red("HIGH"));
 
         this.findViewById(R.id.button_yellow ).setOnClickListener( v -> lightbar.yellow("HIGH"));
+        this.findViewById(R.id.button_white ).setOnClickListener( v -> lightbar.white() );
     }
 
     @Override

@@ -40,5 +40,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/Yellow" />
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/button_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/White" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
